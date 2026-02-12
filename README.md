@@ -37,6 +37,7 @@ bb verify -p ./target/proof/proof -k ./target/proof/vk -i ./target/proof/public_
 
 [dependencies]: sha256 "v0.2.1", (https://github.com/noir-lang/sha256)
 
+```text
 +-------------+----------------------------+----------------------+--------------+-----------------+
 | Package     | Function                   | Expression Width     | ACIR Opcodes | Brillig Opcodes |
 +-------------+----------------------------+----------------------+--------------+-----------------+
@@ -50,9 +51,11 @@ bb verify -p ./target/proof/proof -k ./target/proof/vk -i ./target/proof/public_
 +-------------+----------------------------+----------------------+--------------+-----------------+
 | sha256_test | directive_to_radix         | N/A                  | N/A          | 17              |
 +-------------+----------------------------+----------------------+--------------+-----------------+
+```
 
 [dependencies]: "v0.3.0", git = "https://github.com/noir-lang/sha256"
 
+```text
 +-------------+------------------------+----------------------+--------------+-----------------+
 | Package     | Function               | Expression Width     | ACIR Opcodes | Brillig Opcodes |
 +-------------+------------------------+----------------------+--------------+-----------------+
@@ -62,7 +65,7 @@ bb verify -p ./target/proof/proof -k ./target/proof/vk -i ./target/proof/public_
 +-------------+------------------------+----------------------+--------------+-----------------+
 | sha256_test | directive_to_radix     | N/A                  | N/A          | 17              |
 +-------------+------------------------+----------------------+--------------+-----------------+
-
+```
 
 ## Profile (v.0.3.0)
 
