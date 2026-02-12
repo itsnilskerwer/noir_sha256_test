@@ -12,8 +12,8 @@ fn main() -> std::io::Result<()> {
         31, 32
     ];
 
-    // Calculate hash with incremental api (crate sha2)
-
+    
+    // ---------------- Calculate hash with incremental api (crate sha2) ---------
     // create a Sha256 object
     let mut hasher = Sha256::new();
 
@@ -22,19 +22,20 @@ fn main() -> std::io::Result<()> {
 
     // read hash digest and consume hasher
     let result = hasher.finalize();
+    // ----------------
 
+    // Create or overwrite toml file
     let path = Path::new("../Prover.toml");
 
-    // Crate or overwrite toml file
     let mut file = OpenOptions::new()
         .write(true)
         .create(true)
         .truncate(true) // overwrite, if it exists.
         .open(path)?;
 
-    // Format and write toml    
+    // Formatting 
     writeln!(file, "password = {:?}", password)?; // {:?} formats arrays as [1, 2, 3], which Noir accepts for [u8; 32] inputs
-    writeln!(file, "passwordHash = {:?}", result.as_slice())?; // // Converts generic array to slice
+    writeln!(file, "pw_hash = {:?}", result.as_slice())?; // // Converts generic array to slice
 
     println!("✅ Successfully updated Prover.toml");
     Ok(())
