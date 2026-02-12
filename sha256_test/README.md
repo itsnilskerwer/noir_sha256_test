@@ -111,19 +111,23 @@ Environment:
 Running `chmod +x benchmark.sh` on zsh
 Then, `./benchmark.sh` .
 
-Results v0.2.1:
+### Results v0.2.1:
 
-`Phase,Average_Time_Seconds
+```bash
+Phase,  Average_Time_Seconds
 compile,  .307792
 execute,  .280920
-prove,  .611229`
+prove,  .611229
+```
 
-Results v0.3.0:
+### Results v0.3.0:
 
-`Phase,Average_Time_Seconds
+```bash
+Phase,  Average_Time_Seconds
 compile,  .281087
 execute,  .257887
 prove,  .604413
+```
 
 Note: Results vary approx. +- 0.08s
 TODO: Test with increased runs
