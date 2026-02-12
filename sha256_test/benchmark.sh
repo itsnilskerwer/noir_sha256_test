@@ -8,7 +8,7 @@ set -euo pipefail
 # Configuration
 # --------------------------------------------
 
-RUNS=5
+RUNS=1
 RESULTS_DIR="results"
 TARGET_DIR="target"
 PROOF_DIR="$TARGET_DIR/proof"
